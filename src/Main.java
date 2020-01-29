@@ -12,27 +12,18 @@ public class Main {
 
         switch (input){
             case 1:
-                System.out.println("Input object id: ");
-                int id = input.nextInt();
-                System.out.println("Input name of the object: ");
-                String name = input.next();
-                System.out.println("Input quantity of object: ");
-                int quantity = input.nextInt();
-                System.out.println("Input price of the object: ");
-                double price = input.nextDouble();
-                Item item = new Item(id, name, quantity, price);
-                ItemManager.addItem(item);
+                ItemManager.createItem();
                 break;
             case 2:
-                ItemManager.updateItem(item);
+                ItemManager.updateItem();
                 menu();
                 break;
             case 3:
-                ItemManager.removeItem(item);
+                ItemManager.removeItem();
                 menu();
                 break;
             case 4:
-                ItemManager.listAllItems(item);
+                ItemManager.listAllItems();
                 menu();
                 break;
             default:
